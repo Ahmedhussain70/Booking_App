@@ -21,7 +21,6 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/alert.css">
     
     <style>
         body {
@@ -80,8 +79,6 @@
     </style>
     </head>
   <body>
-      <ul class="notifications"></ul>
-      <?php include 'includes/alert.php'; ?>
       <div class="container rounded bg-white mt-3 mb-3">
           <div class="row">
         <div class="col-lg-12 col-md-7 ">
@@ -185,5 +182,4 @@
   </body>
     <script src="js/home.js"></script>
     <script src="js/search.js"></script>
-    <script src="js/alert.js"></script>
 </html>
