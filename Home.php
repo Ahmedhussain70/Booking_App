@@ -21,6 +21,7 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/alert.css">
     
     <style>
         body {
@@ -79,6 +80,7 @@
     </style>
     </head>
   <body>
+  <div id="liveAlertPlaceholder"></div>
       <div class="container rounded bg-white mt-3 mb-3">
           <div class="row">
         <div class="col-lg-12 col-md-7 ">
@@ -86,10 +88,10 @@
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <h4 class="text-right">Booking</h4>
                 </div>
-                <form action="Registerition-action.php" method="post">
+                <form name="formm" action="Registerition-action.php" method="post">
                 <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels">Device</label><input Required name="DeviceName" type="text" class="form-control" placeholder="" value="<?php echo shell_exec("wmic computersystem get username");?>"></div>
-                    <div class="col-md-6"><label class="labels">Email</label><input type="Email" Required class="form-control" name="Email" placeholder="Enter Email" value=""></div>
+                    <div class="col-md-6"><label class="labels">Device</label><input Required id="namepc" name="DeviceName" type="text" class="form-control" placeholder="" value="<?php echo shell_exec("wmic computersystem get username");?>"></div>
+                    <div class="col-md-6"><label class="labels">Email</label><input type="Email" Required class="form-control" id="email" name="Email" placeholder="Enter Email" value=""></div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-6">
@@ -155,18 +157,18 @@
                     <div id="manage" class="col-md-6"><label class="labels">Location</label><input Required id="input-disabled" disabled type="text" name="location" class="form-control" placeholder="Enter Your Location"></div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col-md-12"><label class="labels">Day</label><input Required type="date" name="Day" class="form-control" placeholder="Enter Day"></div>
+                    <div class="col-md-12"><label class="labels">Day</label><input Required type="date" id="day" name="Day" class="form-control" placeholder="Enter Day"></div>
                 </div>
                 <!-- <div class="row mt-3">
                     <div class="col-md-12"><label class="labels">Time</label><input Required type="time" name="Time" class="form-control" placeholder="Enter Time"></div>
                 </div> -->
                 <div class="row mt-3">
                     <div class="col-md-6">
-                        <div class="col-md-12"><label class="labels">Time From</label><input Required type="time" name="TimeFrom" class="form-control" placeholder="Enter Time From"></div>
+                        <div class="col-md-12"><label class="labels">Time From</label><input Required type="time" id="from" name="TimeFrom" class="form-control" placeholder="Enter Time From"></div>
                     </div>
-                    <div class="col-md-6"><label class="labels">Time To</label><input Required type="Time" name="TimeTo" class="form-control" placeholder="Enter Time To"></div>
+                    <div class="col-md-6"><label class="labels">Time To</label><input Required type="Time" id="to" name="TimeTo" class="form-control" placeholder="Enter Time To"></div>
                 </div>
-                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="submit">Save</button>
+                <div class="mt-5 text-center"><button id="liveAlertBtn" class="btn btn-primary profile-button" type="submit">Save</button>
             </div>
             </form>
             <div class="mt-4">
@@ -179,7 +181,11 @@
 </div>
 </div>
 </div>
+<script>
+    
+</script>
   </body>
     <script src="js/home.js"></script>
     <script src="js/search.js"></script>
+    <script src="js/alert.js"></script>
 </html>
